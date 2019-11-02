@@ -1,0 +1,21 @@
+package com.sda.concurrency.deadlock;
+
+/**
+ * Thread 1 - I got printer - I need scanner (blocked)
+ * Thread 2 - I got scanner - I need printer (blocked)
+ */
+public class DemoDeadLock {
+
+// trebuie sincronizate in acelasi timp si printerul si scannerul, nu sincronizare in interiorul sincronizarii
+
+    public static void main(String[] args) {
+        Printer printer = new Printer();
+        Scanner scanner = new Scanner();
+
+        Thread robert = new Thread(new PrintAndScan(printer, scanner));
+        robert.start();
+
+        Thread anca = new Thread(new ScanAndPrint(printer, scanner));
+        anca.start();
+    }
+}
