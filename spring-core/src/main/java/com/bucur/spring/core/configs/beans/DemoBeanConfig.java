@@ -6,12 +6,14 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class DemoBeanConfig {
 
     public static void main(String[] args) {
-        // create context
+        // create context, Spring's container that will create the objects, wire them together, configure them,
+        // and manage their complete life cycle from creation till destruction
         ApplicationContext appContext = new AnnotationConfigApplicationContext(BeanConfig.class);
 
         // get bean
-        MyBean myBean = appContext.getBean("myBean", MyBean.class);
-        myBean.complexOperation();
+        MyBean bean = appContext.getBean(MyBean.class);
+//        MyBean bean = appContext.getBean("myBean", MyBean.class); // with alias
+        bean.complexOperation();
 
     }
 }

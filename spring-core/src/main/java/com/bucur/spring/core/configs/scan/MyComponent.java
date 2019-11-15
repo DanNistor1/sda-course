@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyComponent {
 
-  public  void complexOperation(){
-      System.out.println("complex stuff...");
-  }
+    public void complexOperation() {
+        System.out.println("complex stuff...");
+    }
 }

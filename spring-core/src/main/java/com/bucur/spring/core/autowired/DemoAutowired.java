@@ -9,7 +9,9 @@ public class DemoAutowired {
 
         ApplicationContext context = new AnnotationConfigApplicationContext(AutoWiredConfig.class);
 
-        TextEditor textEditor =(TextEditor) context.getBean("textEditor");
-        textEditor.spellCheck();
+        TextEditor textEditor = (TextEditor) context.getBean("textEditor"); // daca nu se trece clasa ca argument rezulta un obiect si trebuie facut cast
+        textEditor.format();
+        textEditor.convertImage();
+
     }
 }

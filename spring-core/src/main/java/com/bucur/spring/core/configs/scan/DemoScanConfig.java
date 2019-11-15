@@ -9,7 +9,7 @@ public class DemoScanConfig {
 
         ApplicationContext appContext = new AnnotationConfigApplicationContext(ScanConfig.class);
 
-        MyComponent myComponent =  appContext.getBean("myComponent", MyComponent.class);
+        MyComponent myComponent =  appContext.getBean(MyComponent.class);
         myComponent.complexOperation();
     }
 }
