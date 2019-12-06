@@ -1,0 +1,53 @@
+
+<div class="row">  
+  <div class="col-sm-4"></div>  
+  <div class="col-sm-4">  
+    <h3>Create Book</h3>
+    <div [hidden]="submitted" style="width: 400px;">  
+      <form [formGroup]="bookSaveForm" #bookToSave (ngSubmit)="saveBook(bookToSave)">
+        
+          <div class="form-group">
+              <label for="inp1">Book Title</label>
+              <input id="inp1" type="text" class="form-control" formControlName="book_title"
+                data-toggle="tooltip" data-placement="right" title="Enter book title" required>  
+              <div class="alert alert-danger" *ngIf= "bookTitle.invalid && (bookTitle.dirty || bookTitle.touched)" style="margin-top: 5px;">  
+                <div *ngIf="bookTitle.errors.required">Book title is required</div>  
+              </div>  
+          </div>  
+    
+          <div class="form-group">  
+              <label for="inp2">Book Author</label>  
+              <input id="inp2" type="text" class="form-control" formControlName="book_author"   
+                data-toggle="tooltip" data-placement="right" title="Enter book author" required>  
+                <div class="alert alert-danger" [hidden]= "bookAuthor.valid || bookAuthor.pristine"   
+                style="margin-top: 5px;">  
+                  Book author is required 
+                </div>  
+          </div>  
+    
+          <div class="form-group">  
+              <label for="inp3">Book Published</label>  
+              <input id="inp3" type="date" class="form-control" formControlName="book_published"
+                data-toggle="tooltip" data-placement="right" title="Enter book published" required>
+                <div class="alert alert-danger" *ngIf= "bookPublished.invalid && (bookPublished.dirty || bookPublished.touched)" style="margin-top: 5px;">  
+                  <div *ngIf="bookPublished.errors.isError">{{bookPublished.errors.message}}</div>  
+                </div> 
+          </div>   
+    
+          <button type="submit" class="btn btn-success" [disabled]="!bookSaveForm.valid">Submit</button>  
+      </form>  
+    </div>  
+  </div>  
+  <div class="col-sm-4"></div>  
+</div>
+
+<div class="row">  
+  <div class="col-sm-4"></div>  
+  <div class="col-sm-4">  
+      <div [hidden]="!submitted">  
+         <h4>Book Added SuccessFully!</h4>  
+         <button (click)="addBookForm()" class='btn btn-primary'>Add more books</button>  
+      </div>        
+  </div>  
+  <div class="col-sm-4"></div>  
+</div> 

@@ -22,6 +22,8 @@
         <module>parent-boot-2</module>
         <module>spring-boot-jsp</module>
         <module>spring-mvc-hibernate</module>
+        <module>spring-boot-mvc-security</module>
+        <module>spring-boot-rest</module>
     </modules>
 
     <dependencies>

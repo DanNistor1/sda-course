@@ -11,7 +11,7 @@
          <h1>Spring Boot - MVC web application example</h1>
          <hr>
 
-         <h2>Your name is ${name}</h2>
+         <h2>Your name is ${name}</h2> <!--name from model object-->
 
     </body>
 </html>

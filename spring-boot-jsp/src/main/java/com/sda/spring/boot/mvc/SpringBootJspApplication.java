@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
-// used to create a deployable war
+// used to run applications which are deployed as a compressed archive called Web ARchive (WAR)
 @SpringBootApplication
 public class SpringBootJspApplication extends SpringBootServletInitializer {
 

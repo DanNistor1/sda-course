@@ -23,7 +23,7 @@ import java.util.Properties;
 @EnableJpaRepositories(basePackages = PersistenceJpaConfig.REPOSITORY_PACKAGE)
 @EnableTransactionManagement
 @ComponentScan({PersistenceJpaConfig.COMPONENT_PACKAGE})
-@PropertySource({"classpath:persistence-h2.properties"})
+@PropertySource({"file:C:\\Users\\bcs\\IdeaProjects\\sda-course\\spring-mvc-hibernate\\src\\main\\resources\\persistence-h2.properties"})
 @Configuration
 public class PersistenceJpaConfig {
 
@@ -39,7 +39,7 @@ public class PersistenceJpaConfig {
     public DataSource dataSource() {
         final DriverManagerDataSource dataSource = new DriverManagerDataSource();
         // get properties from resources
-        dataSource.setDriverClassName(env.getProperty("jdbc.driverClassName"));
+        dataSource.setDriverClassName("jdbc.driverClassName");
         dataSource.setUrl("jdbc.url");
         dataSource.setUsername("jdbc.user");
         dataSource.setPassword("jdbc.pass");

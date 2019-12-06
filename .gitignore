@@ -1,7 +1,8 @@
 # Intellij
 .idea/
-*.iml
 *.iws
+*.iml
+*.ipr
 
 # Mac
 .DS_Store
@@ -9,3 +10,10 @@
 # Maven
 log/
 target/
+
+/build/
+*/out/
+*/logs/
+
+.gradle
+!gradle/wrapper/gradle-wrapper.jar

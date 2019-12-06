@@ -8,6 +8,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class SpringMvcHibernateApplication {
 
+    // nefunctional
     public static void main(String[] args) {
         ApplicationContext context =
                 new AnnotationConfigApplicationContext(PersistenceJpaConfig.class);
